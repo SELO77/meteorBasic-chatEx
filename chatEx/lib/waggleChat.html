@@ -1,0 +1,28 @@
+<head>
+    <title>SELOChat</title>
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1" />
+</head>
+
+<body>
+    {{>Template.dynamic template=currentMode}}
+</body>
+
+<template name="chatMain">
+    <div class="container">
+    <!-- 
+        {>(template name)}
+        아래에 각 템플릿이 위치하게 된다 
+    -->
+        <p>{{>loginButtons}}</p>
+        <p>{{>createRoom}}</p>
+        <p>{{>roomList}}</p>
+    </div>
+</template>
+
+<template name="chatRoom">
+    <div class="panel">
+        <p>{{>roomHeader}}</p>
+        <p>{{>messageList}}</p>
+        <p>{{>messageInput}}</p>
+    </div>
+</template>
